@@ -425,19 +425,32 @@ require("lazy").setup({
 		},
 
 		{
-			"jackMort/ChatGPT.nvim",
-			event = "VeryLazy",
+			"Robitx/gp.nvim",
 			config = function()
-				require("chatgpt").setup({
-					api_key_cmd = "rbw get openai_api_key",
+				require("gp").setup({
+					providers = {
+						-- secrets can be strings or tables with command and arguments
+						-- secret = { "cat", "path_to/openai_api_key" },
+						-- secret = { "bw", "get", "password", "OPENAI_API_KEY" },
+						-- secret : "sk-...",
+						-- secret = os.getenv("env_name.."),
+						openai = {
+							disable = true,
+							endpoint = "https://api.openai.com/v1/chat/completions",
+							-- secret = os.getenv("OPENAI_API_KEY"),
+						},
+						copilot = {
+							disable = false,
+							endpoint = "https://api.githubcopilot.com/chat/completions",
+							secret = {
+								"bash",
+								"-c",
+								"cat ~/.config/github-copilot/hosts.json | sed -e 's/.*oauth_token...//;s/\".*//'",
+							},
+						},
+					},
 				})
 			end,
-			dependencies = {
-				"MunifTanjim/nui.nvim",
-				"nvim-lua/plenary.nvim",
-				"folke/trouble.nvim",
-				"nvim-telescope/telescope.nvim",
-			},
 		},
 
 		{
