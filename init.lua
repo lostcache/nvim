@@ -397,6 +397,32 @@ require("lazy").setup({
 			end,
 		},
 
+		{
+			"coffebar/neovim-project",
+			-- init function runs before the plugin is loaded
+			init = function()
+				-- enable saving the state of plugins in the session
+				-- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+				vim.opt.sessionoptions:append("globals")
+			end,
+			config = function()
+				require("neovim-project").setup({
+					-- define project roots
+					projects = {
+						"~/code/*",
+						"~/Documents/*",
+						"~/.config/nvim/*",
+					},
+				})
+				vim.keymap.set("n", "<leader>fp", ":Telescope neovim-project discover<CR>", { silent = true })
+			end,
+			dependencies = {
+				{ "nvim-lua/plenary.nvim" },
+				{ "nvim-telescope/telescope.nvim", tag = "0.1.4" },
+				{ "Shatur/neovim-session-manager" },
+			},
+			lazy = false,
+		},
 
 		{
 			"jackMort/ChatGPT.nvim",
