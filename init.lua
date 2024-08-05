@@ -312,6 +312,7 @@ require("lazy").setup({
 								results_width = 0.5,
 							},
 							vertical = {
+								prompt_position = "top",
 								mirror = false,
 							},
 							width = 0.50,
@@ -323,7 +324,6 @@ require("lazy").setup({
 
 				-- Enable telescope fzf native, if installed
 				pcall(require("telescope").load_extension, "fzf")
-				-- pcall(require("telescope").load_extension("projects"))
 
 				-- See `:help telescope.builtin`
 				vim.keymap.set(
