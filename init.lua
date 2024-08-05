@@ -380,7 +380,7 @@ require("lazy").setup({
 			end,
 		},
 
-        { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+		{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 
 		{
 			-- highlight symbols
