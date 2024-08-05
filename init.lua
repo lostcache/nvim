@@ -454,13 +454,20 @@ require("lazy").setup({
 		},
 
 		{
-			"Robitx/gp.nvim",
+			"nvim-tree/nvim-tree.lua",
 			config = function()
-				require("gp").setup({
-					openai_api_key = { "rbw", "get", "openai_api_key" },
-				})
+				require("nvim-tree").setup({})
+				vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
 			end,
 		},
+
+		{
+			"lewis6991/gitsigns.nvim",
+			config = function()
+				require("gitsigns").setup()
+			end,
+		},
+
 		-- plugins end here
 	},
 
