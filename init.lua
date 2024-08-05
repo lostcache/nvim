@@ -135,6 +135,7 @@ require("lazy").setup({
 				"hrsh7th/nvim-cmp",
 				"williamboman/mason.nvim",
 				"williamboman/mason-lspconfig.nvim",
+				"L3MON4D3/LuaSnip",
 			},
 		},
 
@@ -146,11 +147,12 @@ require("lazy").setup({
 				cmp.setup({
 					snippet = {
 						expand = function(args)
-							-- luasnip.lsp_expand(args.body)
+							require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 						end,
 					},
 					window = {
-						completion = cmp.config.window.bordered({}),
+						completion = cmp.config.window.bordered(),
+						documentation = cmp.config.window.bordered(),
 					},
 					mapping = {
 						-- Navigate through suggestions
@@ -182,17 +184,9 @@ require("lazy").setup({
 
 					sources = {
 						{ name = "copilot", group_index = 2, priority = 1000 },
-						{ name = "nvim_lsp", group_index = 2, priority = 750 },
+						{ name = "luasnip", group_index = 2, priority = 750 },
+						{ name = "nvim_lsp", group_index = 2, priority = 500 },
 						{ name = "path", group_index = 500 },
-					},
-
-					formatting = {
-						format = require("lspkind").cmp_format({
-							mode = "symbol",
-							maxwidth = 50,
-							ellipsis_char = "...",
-							symbol_map = { Codeium = "", Copilot = "🤖", Luasnip = "🔥", LSP = "lsp" },
-						}),
 					},
 				})
 
@@ -221,7 +215,6 @@ require("lazy").setup({
 				"hrsh7th/cmp-buffer",
 				"hrsh7th/cmp-path",
 				"hrsh7th/cmp-cmdline",
-				"onsails/lspkind.nvim",
 			},
 		},
 
