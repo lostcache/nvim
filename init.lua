@@ -275,6 +275,15 @@ require("lazy").setup({
 								}
 							end,
 						},
+						rust = {
+							function()
+								return {
+									exe = "rustfmt",
+									args = { "--emit=stdout" },
+									stdin = true,
+								}
+							end,
+						},
 					},
 				})
 			end,
