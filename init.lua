@@ -398,6 +398,7 @@ require("lazy").setup({
 					require("telescope.builtin").diagnostics,
 					{ desc = "[S]earch [D]iagnostics" }
 				)
+				vim.keymap.set("n", "<leader>fp", "<cmd>Telescope neovim-project discover<cr>", { silent = true })
 			end,
 		},
 
@@ -418,24 +419,20 @@ require("lazy").setup({
 			end,
 		},
 
+		-- manual but manages session as well
 		{
 			"coffebar/neovim-project",
-			-- init function runs before the plugin is loaded
+			opts = {
+				-- define project roots
+				projects = {
+					"~/code/LMU/Registrar/articulation-helper/client",
+					"~/code/LMU/Registrar/articulation-helper/server",
+					"~/.config/nvim",
+				},
+			},
 			init = function()
 				-- enable saving the state of plugins in the session
-				-- save global variables that start with an uppercase letter and contain at least one lowercase letter.
-				vim.opt.sessionoptions:append("globals")
-			end,
-			config = function()
-				require("neovim-project").setup({
-					-- define project roots
-					projects = {
-						"~/code/*",
-						"~/Documents/*",
-						"~/.config/nvim/*",
-					},
-				})
-				vim.keymap.set("n", "<leader>fp", ":Telescope neovim-project discover<CR>", { silent = true })
+				vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
 			end,
 			dependencies = {
 				{ "nvim-lua/plenary.nvim" },
@@ -443,6 +440,7 @@ require("lazy").setup({
 				{ "Shatur/neovim-session-manager" },
 			},
 			lazy = false,
+			priority = 100,
 		},
 
 		{
