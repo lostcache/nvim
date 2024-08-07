@@ -489,6 +489,23 @@ require("lazy").setup({
 			end,
 		},
 
+		--colorschemes
+		{
+			"kvrohit/rasmus.nvim",
+			config = function()
+				vim.cmd.colorscheme("rasmus")
+			end,
+		},
+
+		-- terminal
+		{
+			"akinsho/toggleterm.nvim",
+			config = function()
+				require("toggleterm").setup()
+				vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
+			end,
+		},
+
 		-- plugins end here
 	},
 
