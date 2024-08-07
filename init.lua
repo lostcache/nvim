@@ -1,5 +1,6 @@
 require("vim_options")
 require("keymaps")
+require("autocmd")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
