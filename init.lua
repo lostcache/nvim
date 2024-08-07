@@ -1,5 +1,8 @@
+local vim = vim
+
 require("vim_options")
 require("keymaps")
+require("utils")
 require("autocmd")
 
 -- Bootstrap lazy.nvim
@@ -55,7 +58,7 @@ require("lazy").setup({
 					nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
 					nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 					nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
-					nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
+					-- nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
 					nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 					nmap(
 						"<leader>ws",
@@ -80,6 +83,23 @@ require("lazy").setup({
 						vim.lsp.buf.format()
 					end, { desc = "Format current buffer with LSP" })
 				end
+
+				-- Disable virtual text for LSP diagnostics by default
+				vim.diagnostic.config({
+					virtual_text = false,
+					signs = true,
+					underline = true,
+					update_in_insert = false,
+					severity_sort = true,
+				})
+
+				-- Map the D key to show diagnostics popup
+				vim.api.nvim_set_keymap(
+					"n",
+					"D",
+					"<cmd>lua require('utils').show_diagnostics_popup()<cr>",
+					{ noremap = true, silent = true }
+				)
 
 				-- Enable the following language servers
 				--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
