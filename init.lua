@@ -1,4 +1,4 @@
-require("options")
+require("vim_options")
 require("keymaps")
 
 -- Bootstrap lazy.nvim
