@@ -4,6 +4,7 @@ require("vim_options")
 require("keymaps")
 require("utils")
 require("autocmd")
+require("neovide")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -497,12 +498,17 @@ require("lazy").setup({
 		},
 
 		--colorschemes
+		{ "marko-cerovac/material.nvim" },
 		{
-			"kvrohit/rasmus.nvim",
+			"folke/tokyonight.nvim",
 			config = function()
-				vim.cmd.colorscheme("rasmus")
+				vim.cmd.colorscheme("tokyonight-storm")
 			end,
 		},
+		{ "rebelot/kanagawa.nvim" },
+        { "maxmx03/solarized.nvim" },
+        { "drsooch/gruber-darker-vim" },
+        { "Mofiqul/vscode.nvim" },
 
 		-- terminal
 		{
