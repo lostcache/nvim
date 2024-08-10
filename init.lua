@@ -519,6 +519,20 @@ require("lazy").setup({
 			end,
 		},
 
+		{
+			"xiyaowong/transparent.nvim",
+			config = function()
+				require("transparent").setup({})
+			end,
+		},
+
+		{
+			"ggandor/leap.nvim",
+			config = function()
+				require("leap").create_default_mappings()
+			end,
+		},
+
 		-- plugins end here
 	},
 
