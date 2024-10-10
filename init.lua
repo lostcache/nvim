@@ -38,13 +38,6 @@ require("lazy").setup({
 			"neovim/nvim-lspconfig",
 			config = function()
 				local on_attach = function(client, bufnr)
-					-- NOTE: Remember that lua is a real programming language, and as such it is possible
-					-- to define small helper and utility functions so you don't have to repeat yourself
-					-- many times.
-					--
-					-- In this case, we create a function that lets us more easily define mappings specific
-					-- for LSP related items. It sets the mode, buffer and description for us each time.
-
 					local nmap = function(keys, func, desc)
 						if desc then
 							desc = "LSP: " .. desc
@@ -102,24 +95,29 @@ require("lazy").setup({
 					{ noremap = true, silent = true }
 				)
 
-				-- Enable the following language servers
-				--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-				--
-				--  Add any additional override configuration in the following tables. They will be passed to
-				--  the `settings` field of the server config. You must look up that documentation yourself.
 				local servers = {
 					-- clangd = {},
 					-- gopls = {},
 					-- markdown_languageserver = {},
 					pyright = {},
 					rust_analyzer = {},
-					tsserver = {},
+					ts_ls = {},
 					-- jsonlint = {},
 					zls = {},
 					lua_ls = {
 						Lua = {
 							workspace = { checkThirdParty = false },
 							telemetry = { enable = false },
+						},
+					},
+					gopls = {
+						settings = {
+							gopls = {
+								analyses = {
+									unusedparams = true,
+								},
+								staticcheck = true,
+							},
 						},
 					},
 				}
@@ -206,9 +204,9 @@ require("lazy").setup({
 
 					sources = {
 						{ name = "copilot", group_index = 2, priority = 1000 },
-						{ name = "luasnip", group_index = 2, priority = 750 },
+						{ name = "luasnip", group_index = 2, priority = 500 },
 						{ name = "nvim_lsp", group_index = 2, priority = 500 },
-						{ name = "path", group_index = 500 },
+						{ name = "path", group_index = 1000 },
 					},
 				})
 
@@ -303,6 +301,16 @@ require("lazy").setup({
 									exe = "rustfmt",
 									args = { "--emit=stdout" },
 									stdin = true,
+								}
+							end,
+						},
+						zig = {
+							function()
+								return {
+									exe = "zig fmt",
+									args = {
+										util.escape_path(util.get_current_buffer_file_path()),
+									},
 								}
 							end,
 						},
@@ -403,7 +411,11 @@ require("lazy").setup({
 			end,
 		},
 
-		{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+		{
+			"nvim-treesitter/nvim-treesitter",
+			lazy = false,
+			run = ":TSUpdate",
+		},
 
 		{
 			-- highlight symbols
@@ -429,6 +441,15 @@ require("lazy").setup({
 					"~/code/LMU/Registrar/articulation-helper/client",
 					"~/code/LMU/Registrar/articulation-helper/server",
 					"~/.config/nvim",
+					"~/code/dunno",
+					"~/Documents/LMU/CPD/the_CPD_annual_report_project",
+					"~/.wezterm.lua",
+					"~/code/nn",
+					"~/code/nn_zig",
+					"~/code/codecrafters-http-server-zig",
+					"~/code/zig/http-server",
+					"~/code/codecrafters-redis-zig",
+					"~/code/mat",
 				},
 			},
 			init = function()
@@ -490,6 +511,8 @@ require("lazy").setup({
 			end,
 		},
 
+		{ "stevearc/oil.nvim", opts = {} },
+
 		{
 			"lewis6991/gitsigns.nvim",
 			config = function()
@@ -500,15 +523,23 @@ require("lazy").setup({
 		--colorschemes
 		{ "marko-cerovac/material.nvim" },
 		{
+			"svrana/neosolarized.nvim",
+			dependencies = { "tjdevries/colorbuddy.vim" },
+		},
+		{
 			"folke/tokyonight.nvim",
-			config = function()
-				vim.cmd.colorscheme("tokyonight-storm")
-			end,
 		},
 		{ "rebelot/kanagawa.nvim" },
-        { "maxmx03/solarized.nvim" },
-        { "drsooch/gruber-darker-vim" },
-        { "Mofiqul/vscode.nvim" },
+		{
+			"ellisonleao/gruvbox.nvim",
+			config = function()
+				vim.cmd.colorscheme("tokyonight")
+			end,
+		},
+		{ "LunarVim/darkplus.nvim" },
+		{ "savq/melange-nvim" },
+		{ "rose-pine/neovim" },
+		{ "blazkowolf/gruber-darker.nvim" },
 
 		-- terminal
 		{
@@ -516,6 +547,9 @@ require("lazy").setup({
 			config = function()
 				require("toggleterm").setup()
 				vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
+				vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { silent = true })
+				vim.keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical<CR>", { silent = true })
+				vim.keymap.set("n", "<leader>tt", ":ToggleTerm direction=tab<CR>", { silent = true })
 			end,
 		},
 
@@ -527,9 +561,31 @@ require("lazy").setup({
 		},
 
 		{
-			"ggandor/leap.nvim",
+			"nvimdev/lspsaga.nvim",
 			config = function()
-				require("leap").create_default_mappings()
+				require("lspsaga").setup({})
+			end,
+		},
+
+		{
+			"HiPhish/rainbow-delimiters.nvim",
+			lazy = false,
+			config = function()
+				require("rainbow-delimiters.setup").setup({})
+			end,
+		},
+
+		{ "MeanderingProgrammer/render-markdown.nvim", opts = {} },
+
+		{ "m4xshen/autoclose.nvim", opts = {} },
+
+		{ "folke/trouble.nvim", opts = {} },
+
+		{
+			"hadronized/hop.nvim",
+			config = function()
+				require("hop").setup({})
+				vim.keymap.set("n", "<leader>w", "<cmd>HopWord<CR>", { silent = true })
 			end,
 		},
 

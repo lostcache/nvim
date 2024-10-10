@@ -1,3 +1,5 @@
+local vim = vim
+
 -- leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -41,12 +43,6 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- clear highlights
 keymap("n", "<leader>n", ":nohl<CR>", opts)
-
--- Toggle term
-keymap("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { silent = true })
-keymap("n", "<leader>tv", ":ToggleTerm direction=vertical<CR>", { silent = true })
-keymap("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>", { silent = true })
-keymap("n", "<leader>tt", ":ToggleTerm direction=tab<CR>", { silent = true })
 
 -- Diagnostics
 keymap("n", "<leader>d", ":Trouble diagnostics toggle focus=true filter.buf=0<cr><cr>", opts)
