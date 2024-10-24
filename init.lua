@@ -411,11 +411,11 @@ require("lazy").setup({
 			end,
 		},
 
-		{
-			"nvim-treesitter/nvim-treesitter",
-			lazy = false,
-			run = ":TSUpdate",
-		},
+		-- {
+		-- 	"nvim-treesitter/nvim-treesitter",
+		-- 	lazy = false,
+		-- 	run = ":TSUpdate",
+		-- },
 
 		{
 			-- highlight symbols
@@ -450,6 +450,7 @@ require("lazy").setup({
 					"~/code/zig/http-server",
 					"~/code/codecrafters-redis-zig",
 					"~/code/mat",
+					"~/code/rreddis",
 				},
 			},
 			init = function()
@@ -496,6 +497,7 @@ require("lazy").setup({
 
 		{
 			"nvim-tree/nvim-tree.lua",
+			lazy = false,
 			config = function()
 				require("nvim-tree").setup({
 					filters = {
@@ -521,25 +523,37 @@ require("lazy").setup({
 		},
 
 		--colorschemes
-		{ "marko-cerovac/material.nvim" },
-		{
-			"svrana/neosolarized.nvim",
-			dependencies = { "tjdevries/colorbuddy.vim" },
-		},
-		{
-			"folke/tokyonight.nvim",
-		},
-		{ "rebelot/kanagawa.nvim" },
-		{
-			"ellisonleao/gruvbox.nvim",
-			config = function()
-				vim.cmd.colorscheme("tokyonight")
-			end,
-		},
-		{ "LunarVim/darkplus.nvim" },
-		{ "savq/melange-nvim" },
-		{ "rose-pine/neovim" },
-		{ "blazkowolf/gruber-darker.nvim" },
+		-- {
+		-- 	"marko-cerovac/material.nvim",
+		-- },
+		-- {
+		-- 	"svrana/neosolarized.nvim",
+		-- 	dependencies = { "tjdevries/colorbuddy.vim" },
+		-- 	config = function()
+		-- 		-- vim.cmd.colorscheme("neosolarized")
+		-- 	end,
+		-- },
+		-- {
+		-- 	"folke/tokyonight.nvim",
+		-- 	lazy = false,
+		-- 	config = function()
+		-- 		require("tokyonight").setup({
+		-- 			transparent = true,
+		-- 			styles = {
+		-- 				sidebars = "transparent",
+		-- 				floats = "transparent",
+		-- 			},
+		-- 		})
+		-- 		-- vim.cmd.colorscheme("tokyonight")
+		-- 	end,
+		-- },
+		-- { "rebelot/kanagawa.nvim" },
+		-- { "morhetz/gruvbox" },
+		-- { "LunarVim/darkplus.nvim" },
+		-- -- { "rose-pine/neovim" },
+		-- -- { "blazkowolf/gruber-darker.nvim" },
+		-- -- { "nelstrom/vim-mac-classic-theme" },
+		-- { "pgdouyon/vim-yin-yang" },
 
 		-- terminal
 		{
@@ -555,6 +569,7 @@ require("lazy").setup({
 
 		{
 			"xiyaowong/transparent.nvim",
+			lazy = false,
 			config = function()
 				require("transparent").setup({})
 			end,
@@ -596,3 +611,5 @@ require("lazy").setup({
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
+
+vim.cmd.colorscheme("sl")
