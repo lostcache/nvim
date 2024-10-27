@@ -12,7 +12,7 @@ vim.o.background = "light" -- Ensures background is set to light
 
 -- Define color palette
 local colors = {
-	bg = "#f5f5f5", -- light grey, paper-like background
+	bg = "#dbdbdb", -- light grey, paper-like background
 	fg = "#000000", -- default text color
 	blue = "#0000ff", -- functions color
 	red = "#ff0000", -- keywords and types color
