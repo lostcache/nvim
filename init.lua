@@ -411,11 +411,11 @@ require("lazy").setup({
 			end,
 		},
 
-		-- {
-		-- 	"nvim-treesitter/nvim-treesitter",
-		-- 	lazy = false,
-		-- 	run = ":TSUpdate",
-		-- },
+		{
+			"nvim-treesitter/nvim-treesitter",
+			lazy = false,
+			run = ":TSUpdate",
+		},
 
 		{
 			-- highlight symbols
@@ -605,6 +605,7 @@ require("lazy").setup({
 		},
 
 		-- plugins end here
+		{ "norcalli/nvim-colorizer.lua" },
 	},
 
 	-- Configure any other settings here. See the documentation for more details.
@@ -612,4 +613,4 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-vim.cmd.colorscheme("sl")
+vim.cmd.colorscheme("zenlight")
