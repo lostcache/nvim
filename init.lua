@@ -613,4 +613,4 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-vim.cmd.colorscheme("zenlight")
+vim.cmd.colorscheme("zendark")
