@@ -12,13 +12,14 @@ vim.o.background = "light" -- Ensures background is set to light
 
 -- Define color palette
 local colors = {
-	bg = "#dbdbdb", -- light grey, paper-like background
+	bg = "#968c74", -- light grey, paper-like background
+	-- bg = "#dbdbdb", -- light grey, paper-like background
 	fg = "#000000", -- default text color
-	blue = "#0000ff", -- functions color
-	red = "#ff0000", -- keywords and types color
+	blue = "#12128c", -- functions color
+	red = "#8c0a0a", -- keywords and types color
 	brown = "#a52a2a", -- strings color
-	pink = "#ffc0cb", -- highlights color
-	green = "#008000", -- constants and numbers color
+	pink = "#bd8e96", -- highlights color
+	green = "#075707", -- constants and numbers color
 }
 
 -- Apply highlights to all specified groups
@@ -39,9 +40,9 @@ vim.api.nvim_set_hl(0, "Function", { fg = colors.blue, bold = true })
 vim.api.nvim_set_hl(0, "Error", { fg = colors.red, bg = colors.bg, bold = true })
 vim.api.nvim_set_hl(0, "Todo", { fg = "#ffffff", bg = colors.red, bold = true })
 vim.api.nvim_set_hl(0, "Title", { fg = colors.red, bold = true })
-vim.api.nvim_set_hl(0, "MatchParen", { fg = "#ffffff", bg = colors.red })
+vim.api.nvim_set_hl(0, "MatchParen", { fg = "#ffffff", bg = colors.pink })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#5A5A5A" })
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#e0e0e0" })
 vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#e0e0e0" })
 vim.api.nvim_set_hl(0, "Visual", { bg = colors.pink })
-vim.api.nvim_set_hl(0, "Search", { fg = "#000000", bg = colors.red })
+vim.api.nvim_set_hl(0, "Search", { fg = "#000000", bg = colors.pink })
