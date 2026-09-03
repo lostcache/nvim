@@ -1,0 +1,144 @@
+{
+  "plugins": {
+    "aether.nvim": {
+      "rev": "567efb778534e11ee1072d4fe27178f705a27d8a",
+      "src": "https://github.com/omacom-io/aether.nvim",
+      "version": "'567efb778534e11ee1072d4fe27178f705a27d8a'"
+    },
+    "auto-session": {
+      "rev": "c93a9bfd8a5cbf931a6ead5c824998da874b9f79",
+      "src": "https://github.com/rmagatti/auto-session",
+      "version": "'c93a9bfd8a5cbf931a6ead5c824998da874b9f79'"
+    },
+    "bamboo.nvim": {
+      "rev": "1309bc88bffcf1bedc3e84e7fa9004de93da774a",
+      "src": "https://github.com/ribru17/bamboo.nvim",
+      "version": "'1309bc88bffcf1bedc3e84e7fa9004de93da774a'"
+    },
+    "copilot.vim": {
+      "rev": "f89e977c87180519ba3b942200e3d05b17b1e2fc",
+      "src": "https://github.com/github/copilot.vim",
+      "version": "'f89e977c87180519ba3b942200e3d05b17b1e2fc'"
+    },
+    "gruber-darker.nvim": {
+      "rev": "aba065c3a79b58cc3863d5c9db319255abd1258a",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim",
+      "version": "'aba065c3a79b58cc3863d5c9db319255abd1258a'"
+    },
+    "indent-blankline.nvim": {
+      "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
+      "src": "https://github.com/lukas-reineke/indent-blankline.nvim",
+      "version": "'005b56001b2cb30bfa61b7986bc50657816ba4ba'"
+    },
+    "mini.base16": {
+      "rev": "852a1ab7700dd5ca56ec94232ea7bc2d6158662a",
+      "src": "https://github.com/echasnovski/mini.base16",
+      "version": "'852a1ab7700dd5ca56ec94232ea7bc2d6158662a'"
+    },
+    "mini.comment": {
+      "rev": "a0c721115faff8d05505c0a12dab410084d9e536",
+      "src": "https://github.com/echasnovski/mini.comment",
+      "version": "'a0c721115faff8d05505c0a12dab410084d9e536'"
+    },
+    "mini.completion": {
+      "rev": "d2a2b2a2b5350b713ade3bb744df39eee7d4229b",
+      "src": "https://github.com/echasnovski/mini.completion",
+      "version": "'d2a2b2a2b5350b713ade3bb744df39eee7d4229b'"
+    },
+    "mini.cursorword": {
+      "rev": "dda0f57d55bb1fa19423b7201b2ba892c7d2bb3c",
+      "src": "https://github.com/echasnovski/mini.cursorword",
+      "version": "'dda0f57d55bb1fa19423b7201b2ba892c7d2bb3c'"
+    },
+    "mini.diff": {
+      "rev": "fbb93ea1728e7c9d0944df8bd022a68402bd2e7e",
+      "src": "https://github.com/echasnovski/mini.diff",
+      "version": "'fbb93ea1728e7c9d0944df8bd022a68402bd2e7e'"
+    },
+    "mini.files": {
+      "rev": "22c64f010eef047ed270e29e7cc266cd4740787e",
+      "src": "https://github.com/echasnovski/mini.files",
+      "version": "'22c64f010eef047ed270e29e7cc266cd4740787e'"
+    },
+    "mini.fuzzy": {
+      "rev": "18e9cc3d7406f44a145d074ad18b10e472509a18",
+      "src": "https://github.com/echasnovski/mini.fuzzy",
+      "version": "'18e9cc3d7406f44a145d074ad18b10e472509a18'"
+    },
+    "mini.hipatterns": {
+      "rev": "add8d8abad602787377ec5d81f6b248605828e0f",
+      "src": "https://github.com/echasnovski/mini.hipatterns",
+      "version": "'add8d8abad602787377ec5d81f6b248605828e0f'"
+    },
+    "mini.pairs": {
+      "rev": "d5a29b6254dad07757832db505ea5aeab9aad43a",
+      "src": "https://github.com/echasnovski/mini.pairs",
+      "version": "'d5a29b6254dad07757832db505ea5aeab9aad43a'"
+    },
+    "mini.statusline": {
+      "rev": "3e96596ebe51b899874d8174409cdc4f3c749d9a",
+      "src": "https://github.com/echasnovski/mini.statusline",
+      "version": "'3e96596ebe51b899874d8174409cdc4f3c749d9a'"
+    },
+    "mini.tabline": {
+      "rev": "caf23615b9b99bacc79ecd60f61c4e6a8ec18c84",
+      "src": "https://github.com/echasnovski/mini.tabline",
+      "version": "'caf23615b9b99bacc79ecd60f61c4e6a8ec18c84'"
+    },
+    "mini.visits": {
+      "rev": "f6b86565acc690aa111627433906be3d38e2ba81",
+      "src": "https://github.com/echasnovski/mini.visits",
+      "version": "'f6b86565acc690aa111627433906be3d38e2ba81'"
+    },
+    "nvim-lspconfig": {
+      "rev": "d20d83b3f24f5884da73a9fc92fdc47e778b8d0d",
+      "src": "https://github.com/neovim/nvim-lspconfig",
+      "version": "'d20d83b3f24f5884da73a9fc92fdc47e778b8d0d'"
+    },
+    "nvim-spectre": {
+      "rev": "72f56f7585903cd7bf92c665351aa585e150af0f",
+      "src": "https://github.com/nvim-pack/nvim-spectre",
+      "version": "'72f56f7585903cd7bf92c665351aa585e150af0f'"
+    },
+    "nvim-treesitter": {
+      "rev": "6e42d823ce0a5a76180c473c119c7677738a09d1",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'6e42d823ce0a5a76180c473c119c7677738a09d1'"
+    },
+    "nvim-web-devicons": {
+      "rev": "6788013bb9cb784e606ada44206b0e755e4323d7",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons",
+      "version": "'6788013bb9cb784e606ada44206b0e755e4323d7'"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim",
+      "version": "'b9fd5226c2f76c951fc8ed5923d85e4de065e509'"
+    },
+    "solarized-osaka.nvim": {
+      "rev": "f0c2f0ba0bd56108d53c9bfae4bb28ff6c67bbdb",
+      "src": "https://github.com/craftzdog/solarized-osaka.nvim",
+      "version": "'f0c2f0ba0bd56108d53c9bfae4bb28ff6c67bbdb'"
+    },
+    "telescope.nvim": {
+      "rev": "e709d31454ee6e6157f0537f861f797bd44c0bad",
+      "src": "https://github.com/nvim-telescope/telescope.nvim",
+      "version": "'e709d31454ee6e6157f0537f861f797bd44c0bad'"
+    },
+    "toggleterm.nvim": {
+      "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
+      "src": "https://github.com/akinsho/toggleterm.nvim",
+      "version": "'9a88eae817ef395952e08650b3283726786fb5fb'"
+    },
+    "transparent.nvim": {
+      "rev": "a4145c52f5421f1626a4d7dc0f41e785c4439944",
+      "src": "https://github.com/tribela/transparent.nvim",
+      "version": "'main'"
+    },
+    "trouble.nvim": {
+      "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
+      "src": "https://github.com/folke/trouble.nvim",
+      "version": "'bd67efe408d4816e25e8491cc5ad4088e708a69a'"
+    }
+  }
+}
