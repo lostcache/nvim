@@ -20,6 +20,10 @@
       "src": "https://github.com/github/copilot.vim",
       "version": "'f89e977c87180519ba3b942200e3d05b17b1e2fc'"
     },
+    "everforest": {
+      "rev": "85a86eb62409e3ec88713bff3d1b9d7374e112e4",
+      "src": "https://github.com/sainnhe/everforest"
+    },
     "gruber-darker.nvim": {
       "rev": "aba065c3a79b58cc3863d5c9db319255abd1258a",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim",
@@ -129,6 +133,10 @@
       "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
       "src": "https://github.com/akinsho/toggleterm.nvim",
       "version": "'9a88eae817ef395952e08650b3283726786fb5fb'"
+    },
+    "tokyonight.nvim": {
+      "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
+      "src": "https://github.com/folke/tokyonight.nvim"
     },
     "transparent.nvim": {
       "rev": "a4145c52f5421f1626a4d7dc0f41e785c4439944",

@@ -55,4 +55,5 @@ local colors = {
 require("aether").setup({
 	colors = colors,
 })
+
 vim.cmd.colorscheme("aether")
