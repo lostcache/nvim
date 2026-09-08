@@ -33,6 +33,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			format_cmd = "tex-fmt --stdin --tabsize 4 2>/dev/null"
 		elseif filetype == "go" then
 			format_cmd = "gofmt"
+		elseif filetype == "markdown" then
+			-- prettier needs --stdin-filepath to infer the parser from stdin
+			format_cmd = "prettier --stdin-filepath " .. vim.fn.shellescape(filename)
 		else
 			return
 		end
