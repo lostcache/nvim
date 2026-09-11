@@ -94,6 +94,10 @@
       "src": "https://github.com/echasnovski/mini.visits",
       "version": "'f6b86565acc690aa111627433906be3d38e2ba81'"
     },
+    "neogit": {
+      "rev": "5adc81b26232954cd7a90f158aa7844c18fc3165",
+      "src": "https://github.com/neogitorg/neogit"
+    },
     "nvim-lspconfig": {
       "rev": "d20d83b3f24f5884da73a9fc92fdc47e778b8d0d",
       "src": "https://github.com/neovim/nvim-lspconfig",

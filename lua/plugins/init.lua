@@ -49,7 +49,7 @@ vim.pack.add({
 	{ src = gh("tribela/transparent.nvim"), version = "main" },
 
 	-- git
-	{ src = gh("tpope/vim-fugitive") },
+	{ src = gh("neogitorg/neogit") },
 
 	-- Themes
 	{ src = gh("sainnhe/everforest") },
@@ -65,3 +65,4 @@ require("plugins.trouble")
 require("plugins.toggleterm")
 require("plugins.auto-session")
 require("plugins.indent-blankline")
+require("plugins.neogit")
