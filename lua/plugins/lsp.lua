@@ -23,6 +23,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+local fn_complete = vim.fn.complete
+vim.fn.complete = function(startcol, matches)
+	if #matches == 1 then
+		local completeopt = vim.o.completeopt
+		vim.o.completeopt = "menu"
+		local ok, err = pcall(fn_complete, startcol, matches)
+		vim.o.completeopt = completeopt
+		if not ok then
+			error(err)
+		end
+	else
+		fn_complete(startcol, matches)
+	end
+end
+
 local servers = {
 	clangd = {
 		cmd = { "clangd", "--background-index" },
