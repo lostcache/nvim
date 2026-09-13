@@ -42,7 +42,7 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
 -- Terminal
-map("n", "<leader>t", ":ToggleTerm<CR>")
+map("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" })
 map("t", "jk", "<C-\\><C-n>")
 
 -- Clear search
