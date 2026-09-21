@@ -52,6 +52,9 @@ vim.pack.add({
 	-- git
 	{ src = gh("neogitorg/neogit") },
 
+	-- AI
+	{ src = gh("nickjvandyke/opencode.nvim"), version = vim.version.range("*") },
+
 	-- Themes
 	{ src = gh("sainnhe/everforest") },
 	{ src = gh("folke/tokyonight.nvim") },
@@ -69,3 +72,4 @@ require("plugins.indent-blankline")
 require("plugins.neogit")
 require("plugins.transparent")
 require("plugins.hop")
+require("plugins.opencode")
