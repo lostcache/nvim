@@ -58,10 +58,6 @@ map("n", "<leader>d", function()
 end, { desc = "Line diagnostics" })
 map("n", "[d", vim.diagnostic.get_next)
 map("n", "]d", vim.diagnostic.get_prev)
-map("n", "<leader>dl", function()
-	vim.diagnostic.setqflist()
-	vim.cmd("copen")
-end)
 
 -- Completion navigation (only applies when popup menu is visible)
 -- This preserves Ctrl-i/Ctrl-o jump navigation in normal mode
