@@ -47,6 +47,7 @@ vim.pack.add({
 	{ src = gh("akinsho/toggleterm.nvim"), version = "9a88eae817ef395952e08650b3283726786fb5fb" },
 	{ src = gh("nvim-pack/nvim-spectre"), version = "72f56f7585903cd7bf92c665351aa585e150af0f" },
 	{ src = gh("tribela/transparent.nvim"), version = "main" },
+	{ src = gh("smoka7/hop.nvim"), version = vim.version.range("2") },
 
 	-- git
 	{ src = gh("neogitorg/neogit") },
@@ -66,3 +67,4 @@ require("plugins.toggleterm")
 require("plugins.auto-session")
 require("plugins.indent-blankline")
 require("plugins.neogit")
+require("plugins.hop")

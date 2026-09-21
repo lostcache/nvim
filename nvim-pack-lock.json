@@ -29,6 +29,11 @@
       "src": "https://github.com/blazkowolf/gruber-darker.nvim",
       "version": "'aba065c3a79b58cc3863d5c9db319255abd1258a'"
     },
+    "hop.nvim": {
+      "rev": "08ddca799089ab96a6d1763db0b8adc5320bf050",
+      "src": "https://github.com/smoka7/hop.nvim",
+      "version": "2.0.0 - 3.0.0"
+    },
     "indent-blankline.nvim": {
       "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim",
