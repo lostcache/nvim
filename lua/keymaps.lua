@@ -53,7 +53,9 @@ map("n", "H", ":bprev<CR>")
 map("n", "L", ":bnext<CR>")
 
 -- Diagnostics
-map("n", "<leader>d", vim.diagnostic.open_float)
+map("n", "<leader>d", function()
+	vim.diagnostic.open_float({ border = "rounded", focus = false, scope = "line" })
+end, { desc = "Line diagnostics" })
 map("n", "[d", vim.diagnostic.get_next)
 map("n", "]d", vim.diagnostic.get_prev)
 map("n", "<leader>dl", function()
