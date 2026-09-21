@@ -9,7 +9,7 @@ require("plugins")
 
 require("plugins.aether")
 
-vim.cmd.color("tokyonight-night")
+vim.cmd.colorscheme("vim_default")
 
 -- Statusline: consistent bar background, only mode text color changes
 -- local function set_mode_hl()
