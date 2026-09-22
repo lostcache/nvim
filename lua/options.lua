@@ -1,4 +1,5 @@
 -- Basic UI settings
+vim.o.guicursor = "a:block"
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
