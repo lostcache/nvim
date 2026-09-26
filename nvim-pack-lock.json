@@ -10,6 +10,11 @@
       "src": "https://github.com/rmagatti/auto-session",
       "version": "'c93a9bfd8a5cbf931a6ead5c824998da874b9f79'"
     },
+    "autoreload.nvim": {
+      "rev": "0f9ca5d2ee5599cadec20d732830f059aa8076b4",
+      "src": "https://github.com/ccntrq/autoreload.nvim",
+      "version": "'0f9ca5d2ee5599cadec20d732830f059aa8076b4'"
+    },
     "bamboo.nvim": {
       "rev": "1309bc88bffcf1bedc3e84e7fa9004de93da774a",
       "src": "https://github.com/ribru17/bamboo.nvim",
@@ -33,6 +38,11 @@
       "rev": "08ddca799089ab96a6d1763db0b8adc5320bf050",
       "src": "https://github.com/smoka7/hop.nvim",
       "version": "2.0.0 - 3.0.0"
+    },
+    "hotreload.nvim": {
+      "rev": "76f1c8bd1afaa13a22756c736478144fa38f75f8",
+      "src": "https://github.com/diogo464/hotreload.nvim",
+      "version": "'76f1c8bd1afaa13a22756c736478144fa38f75f8'"
     },
     "indent-blankline.nvim": {
       "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",

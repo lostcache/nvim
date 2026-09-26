@@ -49,6 +49,10 @@ vim.pack.add({
 	{ src = gh("tribela/transparent.nvim"), version = "main" },
 	{ src = gh("smoka7/hop.nvim"), version = vim.version.range("2") },
 
+	-- Editor
+	{ src = gh("diogo464/hotreload.nvim"), version = "76f1c8bd1afaa13a22756c736478144fa38f75f8" },
+	{ src = gh("ccntrq/autoreload.nvim"), version = "0f9ca5d2ee5599cadec20d732830f059aa8076b4" },
+
 	-- git
 	{ src = gh("neogitorg/neogit") },
 
@@ -73,3 +77,5 @@ require("plugins.neogit")
 require("plugins.transparent")
 require("plugins.hop")
 require("plugins.opencode")
+require("plugins.hotreload")
+require("plugins.autoreload")

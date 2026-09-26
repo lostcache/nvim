@@ -16,6 +16,8 @@ vim.o.showtabline = 0
 vim.o.foldmethod = "manual"
 vim.o.scrolloff = 5
 vim.o.colorcolumn = "101"
+-- Reload files changed outside of Neovim (agents, formatters, git, ...)
+vim.o.autoread = true
 -- Sync with system clipboard
 vim.opt.clipboard = "unnamedplus"
 
