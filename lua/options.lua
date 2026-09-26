@@ -14,6 +14,8 @@ vim.o.winborder = "rounded"
 vim.o.cmdheight = 0
 vim.o.showtabline = 0
 vim.o.foldmethod = "manual"
+vim.o.scrolloff = 5
+vim.o.colorcolumn = "101"
 -- Sync with system clipboard
 vim.opt.clipboard = "unnamedplus"
 
