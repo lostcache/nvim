@@ -1,5 +1,8 @@
 -- Basic UI settings
-vim.o.guicursor = "a:block"
+-- Use the Cursor highlight group so the terminal gets an explicit cursor color
+-- (OSC 12). Without it, foot colors the cursor from the character under it,
+-- making it invisible on dim whitespace.
+vim.o.guicursor = "a:block-Cursor"
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
