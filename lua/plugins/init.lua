@@ -17,6 +17,9 @@ vim.pack.add({
 	-- LSP
 	{ src = gh("neovim/nvim-lspconfig"), version = "d20d83b3f24f5884da73a9fc92fdc47e778b8d0d" },
 
+	-- Formatting
+	{ src = gh("stevearc/conform.nvim") },
+
 	-- Treesitter
 	{ src = gh("nvim-treesitter/nvim-treesitter"), version = "6e42d823ce0a5a76180c473c119c7677738a09d1" },
 

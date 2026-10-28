@@ -2,10 +2,11 @@
 require("options")
 require("keymaps")
 require("autocmds")
-require("formatter")
 
 -- Install + load plugins (native vim.pack, all config in lua/plugins/)
 require("plugins")
+
+require("formatter")
 
 require("plugins.aether")
 

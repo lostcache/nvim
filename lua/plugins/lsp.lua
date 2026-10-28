@@ -1,6 +1,15 @@
 -- Native LSP via vim.lsp.* (server configs provided by nvim-lspconfig)
 local map = vim.keymap.set
 
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+	float = { border = "rounded" },
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local bufnr = args.buf

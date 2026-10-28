@@ -20,6 +20,10 @@
       "src": "https://github.com/ribru17/bamboo.nvim",
       "version": "'1309bc88bffcf1bedc3e84e7fa9004de93da774a'"
     },
+    "conform.nvim": {
+      "rev": "016802de402556da54c36bd7359b441266b01cdd",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "copilot.vim": {
       "rev": "f89e977c87180519ba3b942200e3d05b17b1e2fc",
       "src": "https://github.com/github/copilot.vim",
