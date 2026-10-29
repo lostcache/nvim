@@ -20,6 +20,9 @@ vim.pack.add({
 	-- Formatting
 	{ src = gh("stevearc/conform.nvim") },
 
+	-- UI
+	{ src = gh("rachartier/tiny-cmdline.nvim") },
+
 	-- Treesitter
 	{ src = gh("nvim-treesitter/nvim-treesitter"), version = "6e42d823ce0a5a76180c473c119c7677738a09d1" },
 
@@ -68,6 +71,7 @@ vim.pack.add({
 }, { confirm = false })
 
 -- Configure the loaded plugins
+require("plugins.tiny-cmdline")
 require("plugins.lsp")
 require("plugins.mini")
 require("plugins.telescope")

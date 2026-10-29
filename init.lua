@@ -3,6 +3,10 @@ require("options")
 require("keymaps")
 require("autocmds")
 
+-- Native floating cmdline/messages UI, required by tiny-cmdline.nvim.
+-- See :h ui2 (experimental in Neovim 0.12).
+require("vim._core.ui2").enable({})
+
 -- Install + load plugins (native vim.pack, all config in lua/plugins/)
 require("plugins")
 
